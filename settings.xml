@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>gory-Gory-web-projet</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>gory-Gory-web-projet</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>gory-Gory-web-projet</id>
+        <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+      </repository>
+    </repositories>
+
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>gory-Gory-web-projet</id>
+    <name>gory-Gory-web-projet</name>
+    <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
