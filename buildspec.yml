@@ -13,5 +13,4 @@ phases:
       - mvn -B -s settings.xml clean package  
 artifacts:
   files:
-    - "target/Gory-web-projet.war"
-  discard-paths: no
+    - build-output.zip
