@@ -32,12 +32,12 @@
   </profiles>
 
   <mirrors>
-   <mirror>
-  <id>gory-Gory-web-projet</id>
-  <name>gory-Gory-web-projet</name>
-  <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet</url>
-  <mirrorOf>central</mirrorOf>  
-</mirror>
+    <mirror>
+      <id>gory-Gory-web-projet</id>
+      <name>gory-Gory-web-projet</name>
+      <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
   </mirrors>
 
 </settings>
