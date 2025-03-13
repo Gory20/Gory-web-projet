@@ -16,5 +16,6 @@ phases:
       - ls -l target/  # Débogage: vérifiez la présence du fichier
 artifacts:
   files:
-    - "target/Gory-web-projet.war"  # Respectez la casse et les tirets
-  discard-paths: no
+    - '**/*'
+  base-directory: build
+  discard-paths: yes
