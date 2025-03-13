@@ -1,35 +1,46 @@
-<settings>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-<servers>
-  <server>
-    <id>gory-Gory-web-projet</id>
-    <username>aws</username>
-    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
-  </server>
-</servers>
+  <!-- Configuration du serveur avec authentification via CodeArtifact -->
+  <servers>
+    <server>
+      <id>gory-Gory-web-projet</id>
+      <username>aws</username>
+      <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+    </server>
+  </servers>
 
-<profiles>
-  <profile>
-    <id>gory-Gory-web-projet</id>
-    <activation>
-      <activeByDefault>true</activeByDefault>
-    </activation>
-    <repositories>
-      <repository>
-        <id>gory-Gory-web-projet</id>
-        <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
-      </repository>
-    </repositories>
+  <!-- Définition du profil qui active le repository CodeArtifact -->
+  <profiles>
+    <profile>
+      <id>gory-Gory-web-projet</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>gory-Gory-web-projet</id>
+          <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
 
-  </profile>
-</profiles>
+  <!-- Mise en miroir de tous les repositories vers CodeArtifact -->
+  <mirrors>
+    <mirror>
+      <id>gory-Gory-web-projet</id>
+      <name>gory-Gory-web-projet</name>
+      <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
 
-<mirrors>
-  <mirror>
-    <id>gory-Gory-web-projet</id>
-    <name>gory-Gory-web-projet</name>
-    <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
-    <mirrorOf>*</mirrorOf>
-  </mirror>
-</mirrors>
 </settings>
