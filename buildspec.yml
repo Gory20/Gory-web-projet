@@ -6,17 +6,17 @@ phases:
       java: corretto8
   pre_build:
     commands:
-      - echo Initializing environment
-      -  export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain gory --domain-owner 842675983046 --query authorizationToken --output text`
+      - echo "Initialisation de l'environnement"
+      - export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain gory --domain-owner 842675983046 --query authorizationToken --output text)
+      - echo "Token CodeArtifact récupéré : $CODEARTIFACT_AUTH_TOKEN"  # Debug
   build:
     commands:
-      - echo Build started on `date`
-      - mvn -s settings.xml compile
+      - echo "Build démarré le $(date)"
+      - mvn -B -s settings.xml clean package  # Combine compile + package
   post_build:
     commands:
-      - echo Build completed on `date`
-      - mvn -s settings.xml package
+      - echo "Build terminé le $(date)"
 artifacts:
   files:
-    - target/Gory-web-projet.war
+    - "target/Gory-web-projet.war"
   discard-paths: no
