@@ -2,7 +2,6 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <!-- Configuration du serveur avec authentification via CodeArtifact -->
   <servers>
     <server>
       <id>gory-Gory-web-projet</id>
@@ -11,7 +10,6 @@
     </server>
   </servers>
 
-  <!-- Définition du profil qui active le repository CodeArtifact -->
   <profiles>
     <profile>
       <id>gory-Gory-web-projet</id>
@@ -33,13 +31,13 @@
     </profile>
   </profiles>
 
-  <!-- Mise en miroir de tous les repositories vers CodeArtifact -->
   <mirrors>
     <mirror>
       <id>gory-Gory-web-projet</id>
       <name>gory-Gory-web-projet</name>
       <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
-      <mirrorOf>*</mirrorOf>
+      <!-- Remplacer * par external:* pour ne pas forcer l'utilisation de CodeArtifact pour les plugins Maven -->
+      <mirrorOf>external:*</mirrorOf>
     </mirror>
   </mirrors>
 
