@@ -18,7 +18,9 @@ phases:
       - echo "Vérification des artefacts générés :"
       - ls -l target/*.war  # Vérification critique
 artifacts:
-  base-directory: target
   files:
-    - "gory-web-project.war"  # Nom exact vérifié
+    - target/gory-web-project.war
+    - appspec.yml
+    - scripts/**/*
   discard-paths: no
+
