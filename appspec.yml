@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/gory-web-projet.war
+  - source: target/gory-web-projet.war
     destination: /usr/share/tomcat/webapps/
 hooks:
   BeforeInstall:
