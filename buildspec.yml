@@ -5,17 +5,18 @@ phases:
       java: corretto8
   pre_build:
     commands:
-      - echo "Récupération du token CodeArtifact..."
-      - export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain gory --domain-owner 842675983046 --query authorizationToken --output text)
+      - echo Initializing environment
+      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain gory --domain-owner 842675983046 --query authorizationToken --output text`
   build:
     commands:
-      - mvn -B -s settings.xml clean package
+      - echo Build started on `date`
+      - mvn -s settings.xml compile
   post_build:
     commands:
-      - echo "Vérification du fichier .war..."
-      - ls -l target/  # Débogage: vérifiez la présence du fichier
+      - echo Build completed on `date`
+      - mvn -s settings.xml package
 artifacts:
   base-directory: target
   files:
-    - gory-web-project.war
+    - target/nextwork-web-project.war
   discard-paths: no
