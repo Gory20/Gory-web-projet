@@ -4,11 +4,11 @@ sudo yum -y install httpd
 sudo cat << EOF > /etc/httpd/conf.d/tomcat_manager.conf
 <VirtualHost *:80>
   ServerAdmin root@localhost
-  ServerName app.gory.com
+  ServerName app.nextwork.com
   DefaultType text/html
   ProxyRequests off
   ProxyPreserveHost On
-  ProxyPass / http://localhost:8080/gory-web-projet/
-  ProxyPassReverse / http://localhost:8080/gory-web-projet/
+  ProxyPass / http://localhost:8080/gory-web-project/
+  ProxyPassReverse / http://localhost:8080/gory-web-project/
 </VirtualHost>
 EOF
