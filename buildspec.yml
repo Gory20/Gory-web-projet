@@ -18,5 +18,5 @@ phases:
 artifacts:
   base-directory: target
   files:
-    - target/nextwork-web-project.war
+    - target/gory-web-projet.war
   discard-paths: no

@@ -19,7 +19,10 @@
       <repositories>
         <repository>
           <id>gory-Gory-web-projet</id>
+
           <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet</url>
+
+ 
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -31,13 +34,15 @@
     </profile>
   </profiles>
 
-  <mirrors>
-    <mirror>
-      <id>gory-Gory-web-projet</id>
-      <name>gory-Gory-web-projet</name>
-      <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet</url>
-      <mirrorOf>central</mirrorOf>
-    </mirror>
-  </mirrors>
+  
+
+   <mirror>
+  <id>gory-Gory-web-projet</id>
+  <name>gory-Gory-web-projet</name>
+  <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+  <mirrorOf>central</mirrorOf>  <!-- Remplacer external:* par central -->
+</mirror>
+  
 
 </settings>
+
