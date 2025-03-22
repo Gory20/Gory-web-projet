@@ -4,7 +4,7 @@
 
   <servers>
   <server>
-    <id>gory-Gory-web-projet</id>
+    <id>gory-gory</id>
     <username>aws</username>
     <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
   </server>
@@ -12,14 +12,14 @@
 
   <profiles>
   <profile>
-    <id>gory-Gory-web-projet</id>
+    <id>gory-gory</id>
     <activation>
       <activeByDefault>true</activeByDefault>
     </activation>
     <repositories>
       <repository>
-        <id>gory-Gory-web-projet</id>
-        <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+        <id>gory-gory</id>
+        <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/gory/</url>
       </repository>
     </repositories>
   </profile>
@@ -28,9 +28,9 @@
 
    <mirrors>
   <mirror>
-    <id>gory-Gory-web-projet</id>
-    <name>gory-Gory-web-projet</name>
-    <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+    <id>gory-gory</id>
+    <name>gory-gory</name>
+    <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/gory/</url>
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>
