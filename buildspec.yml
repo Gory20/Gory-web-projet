@@ -19,7 +19,7 @@ phases:
       - ls -l target/*.war  # Vérification critique
 artifacts:
   files:
-    - target/gory-web-project.war
+    - target/Gory-web-projet.war
     - appspec.yml
     - scripts/**/*
   discard-paths: no
