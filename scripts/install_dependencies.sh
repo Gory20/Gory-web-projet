@@ -8,7 +8,7 @@ sudo cat << EOF > /etc/httpd/conf.d/tomcat_manager.conf
   DefaultType text/html
   ProxyRequests off
   ProxyPreserveHost On
-  ProxyPass / http://localhost:8080/gory-web-projet/
-  ProxyPassReverse / http://localhost:8080/gory-web-projet/
+  ProxyPass / http://localhost:8080/Gory-web-projet/
+  ProxyPassReverse / http://localhost:8080/Gory-web-projet/
 </VirtualHost>
 EOF

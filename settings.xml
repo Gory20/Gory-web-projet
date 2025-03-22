@@ -3,44 +3,35 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
   <servers>
-    <server>
-      <id>gory-gory-web-projet</id>
-      <username>aws</username>
-      <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
-    </server>
-  </servers>
+  <server>
+    <id>gory-Gory-web-projet</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
 
   <profiles>
-    <profile>
-      <id>gory-gory-web-projet</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <repositories>
-        <repository>
-          <id>gory-gory-web-projet</id>
-
-          <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/gory-web-projet</url>
-
- 
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
-
+  <profile>
+    <id>gory-Gory-web-projet</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>gory-Gory-web-projet</id>
+        <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
   
 
-   <mirror>
-  <id>gory-gory-web-projet</id>
-  <name>gory-gory-web-projet</name>
-  <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/gory-web-projet/</url>
-  <mirrorOf>central</mirrorOf>  <!-- Remplacer external:* par central -->
-</mirror>
-
+   <mirrors>
+  <mirror>
+    <id>gory-Gory-web-projet</id>
+    <name>gory-Gory-web-projet</name>
+    <url>https://gory-842675983046.d.codeartifact.us-east-1.amazonaws.com/maven/Gory-web-projet/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
 </settings>
